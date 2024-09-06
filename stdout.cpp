@@ -49,9 +49,9 @@ void _stderr(HalonHSLContext* hhc, HalonHSLArguments* args, HalonHSLValue* ret)
 		return;
 	}
 
-	mstdout.lock();
+	mstderr.lock();
 	double r = (double)write(2, stringv, stringl);
-	mstdout.unlock();
+	mstderr.unlock();
 	HalonMTA_hsl_value_set(ret, HALONMTA_HSL_TYPE_NUMBER, &r, 0);
 }
 

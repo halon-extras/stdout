@@ -1,0 +1,34 @@
+[
+    {
+        "name": "stdout",
+        "parameters": {
+            "required": [
+                {
+                    "name": "value",
+                    "type": "string"
+                }
+            ]
+        },
+        "returnType": "number",
+        "detail": "stdout(string $value): number",
+        "value": "stdout($0)",
+        "documentation": "Print string to stdout.",
+        "link": "[Full documentation](https://github.com/halon-extras/stdout)"
+    },
+    {
+        "name": "stderr",
+        "parameters": {
+            "required": [
+                {
+                    "name": "value",
+                    "type": "string"
+                }
+            ]
+        },
+        "returnType": "number",
+        "detail": "stderr(string $value): number",
+        "value": "stderr($0)",
+        "documentation": "Print string to stderr.",
+        "link": "[Full documentation](https://github.com/halon-extras/stdout)"
+    }
+]

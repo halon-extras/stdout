@@ -3,6 +3,6 @@
 ```
 export HALON_REPO_USER=exampleuser
 export HALON_REPO_PASS=examplepass
-docker-compose -p halon-extras-stdout up --build
-docker-compose -p halon-extras-stdout down --rmi local
+docker compose -p halon-extras-stdout up --build
+docker compose -p halon-extras-stdout down --rmi local
 ```

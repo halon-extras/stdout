@@ -2,8 +2,8 @@
 #include <unistd.h>
 #include <mutex>
 
-std::mutex mstdout;
-std::mutex mstderr;
+static std::mutex mstdout;
+static std::mutex mstderr;
 
 HALON_EXPORT
 int Halon_version()
@@ -11,7 +11,7 @@ int Halon_version()
 	return HALONMTA_PLUGIN_VERSION;
 }
 
-void _stdout(HalonHSLContext* hhc, HalonHSLArguments* args, HalonHSLValue* ret)
+static void _stdout(HalonHSLContext* hhc, HalonHSLArguments* args, HalonHSLValue* ret)
 {
 	HalonHSLValue* a;
 
@@ -33,7 +33,7 @@ void _stdout(HalonHSLContext* hhc, HalonHSLArguments* args, HalonHSLValue* ret)
 	HalonMTA_hsl_value_set(ret, HALONMTA_HSL_TYPE_NUMBER, &r, 0);
 }
 
-void _stderr(HalonHSLContext* hhc, HalonHSLArguments* args, HalonHSLValue* ret)
+static void _stderr(HalonHSLContext* hhc, HalonHSLArguments* args, HalonHSLValue* ret)
 {
 	HalonHSLValue* a;
 
